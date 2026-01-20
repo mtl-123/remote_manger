@@ -1,0 +1,61 @@
+rdp_profiles:
+    - name: 高性能办公
+      desc: 含音频、视频、多显示器、驱动器、剪贴板等
+      args:
+        - +aero
+        - +async-channels
+        - +async-update
+        - +auto-reconnect
+        - /auto-reconnect-max-retries:5
+        - /cert:ignore
+        - +disp
+        - /dynamic-resolution
+        - +home-drive
+        - /timeout:5000
+        - +video
+        - +window-drag
+        - +clipboard
+        - /video
+        - +jpeg
+        - +echo
+        - +f
+        - /network:auto
+        - /bpp:32
+        - /microphone:sys:pulse
+        - /sound:sys:pulse,latency:100
+        - /rfx
+        - /usb:auto
+        - +drives
+        - +fonts
+        - +wallpaper
+        - +themes
+        - +menu-anims
+        - -compression
+    - name: 基础桌面
+      desc: 仅剪贴板和驱动器
+      args:
+        - +clipboard
+        - +drives
+    - name: 安全最小化
+      desc: 仅图形，禁用所有重定向
+      args:
+        - /cert:ignore
+hosts:
+    - name: MTL-10-11
+      ip: 192.168.10.11
+      port: 3389
+      username: MTL
+      password: Im2018@sight
+      drive: /home/meitaolin
+      type: rdp
+      key_path: ""
+      rdp_profile: ""
+    - name: SGD-1-2
+      ip: 192.168.1.2
+      port: 50022
+      username: meitaolin
+      password: Im2018@sight
+      drive: ""
+      type: ssh
+      key_path: ""
+      rdp_profile: ""

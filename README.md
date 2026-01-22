@@ -4,6 +4,7 @@ sudo apt install -y build-essential clang gcc python3-dev patchelf upx
 ```
 
 # 使用nuitka 编译
+```bash
 nuitka \
   --onefile \
   --follow-imports \
@@ -17,5 +18,5 @@ nuitka \
   --include-package=yaml \
   --remove-output \
   main.py
-
+```
 
